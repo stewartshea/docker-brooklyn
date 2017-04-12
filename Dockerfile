@@ -10,4 +10,6 @@ RUN wget http://apache.mirror.globo.tech/brooklyn/apache-brooklyn-0.10.0/apache-
 
 RUN chmod +x /opt/brooklyn/bin/brooklyn
 
+EXPOSE 8081
+
 CMD ["/opt/brooklyn/bin/brooklyn","launch"]
