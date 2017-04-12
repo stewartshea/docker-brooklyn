@@ -8,4 +8,6 @@ RUN yum clean all \
 RUN wget http://apache.mirror.globo.tech/brooklyn/apache-brooklyn-0.10.0/apache-brooklyn-0.10.0-1.noarch.rpm \ 
     && yum install -y apache-brooklyn-0.10.0-1.noarch.rpm
 
-CMD ["bin/brooklyn","launch"]
+RUN chmod +x /opt/brooklyn/bin/brooklyn
+
+CMD ["/opt/brooklyn/bin/brooklyn","launch"]
